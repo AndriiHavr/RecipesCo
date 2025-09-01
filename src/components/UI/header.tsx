@@ -14,15 +14,14 @@ export const Logo = () => {
     <Image
       src="/logo.png"
       alt="recipes"
-      width="26"
-      height="26"
+      width={26}
+      height={26}
       priority
     ></Image>
   );
 };
 
 export default function Header() {
-
   const navItems = [
     { href: "/", label: "Recipes" },
     { href: "/ingredients", label: "Ingredients" },
@@ -38,14 +37,15 @@ export default function Header() {
         </Link>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {navItems.map(i=>{
-            return (   <NavbarItem key={i.href}>
-          <Link color="foreground" href={i.href}>
-            {i.label}
-          </Link>
-        </NavbarItem>)
+        {navItems.map((i) => {
+          return (
+            <NavbarItem key={i.href}>
+              <Link color="foreground" href={i.href}>
+                {i.label}
+              </Link>
+            </NavbarItem>
+          );
         })}
-        
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
