@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {Providers} from "@/providers/provider"
 import Header from "@/components/UI/header"
+import { siteConfig } from "@/config/site.config";
 
 
 const geistSans = Geist({
@@ -17,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RecipesCo",
-  description: "food recipes kitchen health dinner eat eating",
+  title: siteConfig.title,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({
